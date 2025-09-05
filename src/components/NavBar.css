@@ -1,0 +1,44 @@
+/* Navegación principal */
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #292C3E;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1rem;
+    line-height: 1;
+    background-clip: padding-box;
+}
+
+nav ul li a:hover{
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.contenedor{
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 1.2rem;
+    background-color: black;
+}
+
+/* --- Estilo para el CartWidget (ícono del carrito) --- */
+.contenedor i {
+  font-size: 3rem;           /* tamaño del ícono */
+  cursor: pointer;           /* cambia cursor */
+  transition: transform 0.2s ease;
+  color: white;              /* asegura visibilidad en nav oscuro */
+}
+
+/* Hover del carrito */
+.contenedor i:hover {
+  transform: scale(1.2);     /* se agranda al pasar */
+}

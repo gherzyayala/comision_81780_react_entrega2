@@ -1,0 +1,62 @@
+/* Contenedor que centra solo los item-card */
+.item-card-wrapper {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+}
+
+/* Estilo para la tarjeta */
+.item-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #292C3E;
+  display: flex;
+  flex-direction: column; /* coloca elementos uno debajo del otro */
+  align-items: center;    /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente */
+  width: 400px; /* ejemplo de ancho fijo */
+  min-height: 200px; /* ejemplo de alto mínimo */
+}
+
+/* Estilo para el título */
+.item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Opcional: hover en título */
+.item-title:hover {
+  color: #0073e6;
+}
+
+button{
+    background-color: #292C3E;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: .8rem;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: aqua;
+    color: #292C3E;
+}
+
+small{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+p{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
