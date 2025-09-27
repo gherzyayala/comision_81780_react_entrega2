@@ -40,5 +40,5 @@ nav ul li a:hover{
 
 /* Hover del carrito */
 .contenedor i:hover {
-  transform: scale(1.2);     /* se agranda al pasar */
+  transform: scale(1.5);     /* se agranda al pasar */
 }

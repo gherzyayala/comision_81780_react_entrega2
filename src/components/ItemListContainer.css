@@ -1,0 +1,15 @@
+.titulo_saludo{
+    color: #292C3E;
+    text-align: center;
+    margin-top: 2rem;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.titulo_saludo:hover{
+    background-color: antiquewhite;
+    color: blue;
+}

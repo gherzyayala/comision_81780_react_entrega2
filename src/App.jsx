@@ -2,41 +2,37 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import Item from './components/Item'
+import ItemListContainer from './components/ItemListContainer'
 import NavBar from './components/NavBar'
-import Saludo from './components/Saludo'
+import { BrowserRouter, Routes, Route } from 'react-router'
+import ItemDetailContainer from './components/ItemDetailContainer'
+// 1. Importar BrowserRouter
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      {/* Renderizamos el NavBar  */}
-      <NavBar/>
+      <BrowserRouter>
+        <main className="container">
+          <NavBar/>
+          <Routes>
+            {/* 1 pagina para ItemListContainer 
+                2 pagina para (ItemDetail)
+                1 pagina de 404, cuando no encontremos contenido*/
+            }
+            <Route path="/" element={ <ItemListContainer saludo="Bienvenido a mi Tienda en Línea"/>} />
+            <Route
+            path="category/:categParam"
+            element = { <ItemListContainer saludo="Categoria"></ItemListContainer>} />
+            
+            <Route path="/detail/:idParam" element={ <ItemDetailContainer/>} />
+            <Route path="*" element={ <p>Opps!! No encontramos esto</p> }></Route>
 
-      {/* Voy a renderizar/pegar mi componente de ItemList */}
-      <Saludo
-      saludo="Bienvenido a mi Tienda en Línea"
-      />
-      {/* Celular */}
-      <Item
-      title="Celular"
-      price={400}
-      imgURL="https://thumbs.dreamstime.com/b/maqueta-del-artilugio-teléfono-celular-104748796.jpg"
-      />
-      {/* monitor */}
-      <Item
-      title="Monitor"
-      price={500.59}
-      imgURL="https://www.efe.com.pe/media/catalog/product/g/p/gp-mgmg2730_01.jpg"
-      />
-      {/* mouse */}
-      <Item
-      title="Mouse"
-      price={999}
-      imgURL="https://freerangestock.com/sample/36653/wireless-computer-mouse-isolated-on-white-background.jpg"
-      />
-    </>
+          </Routes>
+
+        </main>
+      </BrowserRouter> 
+    </> 
   )
 }
 
