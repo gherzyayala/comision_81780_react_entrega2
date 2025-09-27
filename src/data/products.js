@@ -13,7 +13,7 @@ const products = [
     title: "Smartphone X",
     price: 899,
     imgURL: "/products/smartphone.jpg",
-    stock: 25,
+    stock: 30,
     category: "Electronics",
     description: "Smartphone con cámara avanzada y batería de larga duración."
   },
