@@ -16,7 +16,7 @@ export function getProductsById(idParam){
     const promiseProduct = new Promise ( (resolve) => {
         setTimeout( () => {
             console.log("devolviendo datos...")
-            resolve(products)
+            resolve(requestProduct)
         },2000 )
     })
     return promiseProduct;

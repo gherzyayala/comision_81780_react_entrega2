@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 function ItemDetailContainer(){
     const {idParam} = useParams();
+    
     const [item, setItem] = useState(null)
     useEffect( () => {
         getProductsById(idParam).then(res => setItem(res));
@@ -26,7 +27,7 @@ function ItemDetailContainer(){
                         </span>
                     </p>
                     <br/>
-                    <p style= {{fontSize:"10px"}} >{item.descripcion}</p>
+                    <p style= {{fontSize:"10px"}}>{item.description}</p>
                     <button>Comprar</button>
                 </div>
             </div>
