@@ -1,15 +1,20 @@
 .titulo_saludo{
-    color: #292C3E;
+    color: #f5f5f5; /* texto blanco limpio */
     text-align: center;
     margin-top: 2rem;
-    color: whitesmoke;
     background-color: black;
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 1.2rem;
     font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .titulo_saludo:hover{
-    background-color: antiquewhite;
-    color: blue;
+    color: #0ff; /* acento vibrante: cian eléctrico */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 
+                 0 0 20px rgba(0, 255, 255, 0.6); /* efecto glow */
+    background-color: rgba(255, 255, 255, 0.05); /* fondo sutil */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
 }
