@@ -36,7 +36,7 @@ function Item(props){
                     </span>
                 </p>
                 <br/>
-                <p style= {{fontSize:"10px"}} >{props.description}</p>
+                <p style= {{fontSize:"12px", textAlign: "center"}} >{props.description}</p>
                 <Link to={`/detail/${props.id}`}>
                     <button>Ir a ver detalle</button>
                 </Link>

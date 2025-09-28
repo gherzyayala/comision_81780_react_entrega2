@@ -27,7 +27,7 @@ function ItemDetailContainer(){
                         </span>
                     </p>
                     <br/>
-                    <p style= {{fontSize:"10px"}}>{item.description}</p>
+                    <p style= {{fontSize:"12px", textAlign: "center"}}>{item.description}</p>
                     <button>Comprar</button>
                 </div>
             </div>
