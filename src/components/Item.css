@@ -5,58 +5,75 @@
   align-items: center;     /* centra vertical */
 }
 
-/* Estilo para la tarjeta */
+/* Tarjeta individual */
 .item-card {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
   padding: 20px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   cursor: pointer;
-  color: #292C3E;
+  color: whitesmoke;
   display: flex;
-  flex-direction: column; /* coloca elementos uno debajo del otro */
-  align-items: center;    /* centra horizontalmente */
-  justify-content: center; /* centra verticalmente */
-  width: 400px; /* ejemplo de ancho fijo */
-  min-height: 200px; /* ejemplo de alto mínimo */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px; /* tamaño controlado */
+  min-height: 250px;
+  transition: all 0.3s ease;
+  margin: 1.5rem;
 }
 
-/* Estilo para el título */
+/* Hover */
+.item-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+/* Título */
 .item-title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
+  color: whitesmoke;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Opcional: hover en título */
 .item-title:hover {
-  color: #0073e6;
+  color: #0ff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
 }
 
-button{
-    background-color: #292C3E;
-    border-radius: 5px;
-    margin-top: 1rem;
-    padding: .8rem;
-    color: whitesmoke;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover{
-    background-color: aqua;
-    color: #292C3E;
-}
-
-small{
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
-p{
-  font-size: 1.8rem;
+/* Botón */
+button {
+  background-color: transparent;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  color: #0ff;
+  cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0ff;
+  color: black;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+}
+
+/* Texto pequeño */
+small {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #aaa;
+}
+
+/* Texto general */
+p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }

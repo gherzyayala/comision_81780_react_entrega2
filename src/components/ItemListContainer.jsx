@@ -1,6 +1,6 @@
 import Item from "./Item";
 import products from '../data/products';
-import getProducts from "../data/mockAPI";
+import getProducts, { getProductByCategory } from "../data/mockAPI";
 import './ItemListContainer.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -14,11 +14,19 @@ function ItemListContainer(props){
     console.log("Renderizando....")
 
     useEffect ( ()=>{
-      const promesaDatos = getProducts();
-      promesaDatos.then((respuesta) => {
+
+     if(categParam){
+        getProductByCategory(categParam).then((respuesta) => {
+            console.log("Promesa terminada")
+            setProducts(respuesta)
+        })
+     }else{
+        const promesaDatos = getProducts();
+        promesaDatos.then((respuesta) => {
         setProducts(respuesta)
-      } )  
-    }, []);
+        } ) 
+     }
+    }, [categParam]);
 
     console.log(products);
     return(

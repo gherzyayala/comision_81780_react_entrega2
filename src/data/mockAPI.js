@@ -22,4 +22,16 @@ export function getProductsById(idParam){
     return promiseProduct;
 }
 
+export function getProductByCategory(categParam){
+    const requestCategory = products.filter(product => product.category == categParam)
+
+    const promiseCategory = new Promise ( (resolve) => {
+        setTimeout( () => {
+            console.log("devolviendo datos...")
+            resolve(requestCategory)
+        },2000 )
+    })
+    return promiseCategory;
+}
+
 export default getProducts;
