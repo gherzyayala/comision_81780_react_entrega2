@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import cartContext from "../context/cartContext";
+import './CartContainer.css'
 
 function CartContainer(){
     const {cart, removeItem} = useContext(cartContext)
 
     if(cart.length === 0){
         return (
-            <div>
+            <div className="empty-cart">
                 <h2>Tu carrito está vacío</h2>
-                <h2>Volver al inicio</h2>
+                <button>Volver al inicio</button>
             </div>
         )
     }
@@ -19,7 +20,7 @@ function CartContainer(){
             <ul>
                 {
                     cart.map(itemInCart => <div>
-                        <h4>{itemInCart.title}</h4>
+                        <h2>{itemInCart.title}</h2>
                         <p>Price: {itemInCart.price} </p>
                         <p>Quantity: {itemInCart.count} </p>
                         <button onClick={() => removeItem(itemInCart.id)}>🗑️</button>

@@ -1,0 +1,156 @@
+/* --- Contenedor principal del carrito --- */
+section {
+  background-color: #121212;             /* fondo oscuro coherente con el sitio */
+  color: #f5f5f5;                        /* texto claro */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 800px;
+  margin: 3rem auto;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* --- Título principal --- */
+section h2 {
+  font-size: 2.5rem;
+  color: #0ff;                           /* acento neón */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* --- Lista del carrito --- */
+section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Item del carrito --- */
+section ul div {
+  background-color: #1c1c1c;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section ul div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* --- Subtítulos de cada producto --- */
+section ul div h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+}
+
+/* --- Texto del precio y cantidad --- */
+section ul div p {
+  font-size: 1.4rem;
+  margin: 0.3rem 0;
+  color: #ccc;
+}
+
+/* --- Botón eliminar item --- */
+section ul div button {
+  background-color: transparent;
+  border: 2px solid #ff5252;
+  color: #ff5252;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem;
+}
+
+section ul div button:hover {
+  background-color: #ff5252;
+  color: #121212;
+  transform: scale(1.1);
+}
+
+/* --- Línea divisoria --- */
+section hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* --- Total --- */
+section h3 {
+  font-size: 2rem;
+  color: #0ff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* --- Botón de pagar --- */
+section > div:last-of-type button {
+  background-color: #0ff;
+  color: #121212;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section > div:last-of-type button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+
+/* --- Contenedor principal del mensaje --- */
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* centra verticalmente */
+  background-color: #121212;
+  color: #f5f5f5;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  padding: 2rem;
+}
+
+/* --- Título --- */
+.empty-cart h2 {
+  font-size: 2.5rem;
+  color: #0ff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* --- Botón de volver al inicio --- */
+.empty-cart button {
+  background-color: #0ff;
+  color: #121212;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.empty-cart button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
