@@ -1,6 +1,7 @@
 import Item from "./Item";
+import {getProducts} from "../data/firestore";
 import products from '../data/products';
-import getProducts, { getProductByCategory } from "../data/mockAPI";
+import { getProductByCategory } from "../data/firestore";
 import './ItemListContainer.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";

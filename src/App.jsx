@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import { createContext } from 'react'
 import { CartContextProvider } from './context/cartContext'
 import CartContainer from './components/CartContainer'
+import app from './data/firestore'
 // 1. Importar BrowserRouter
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
   return (
     <>
       
-      <CartContextProvider value={ {cart:"ok"} }> 
+      <CartContextProvider value={ {cart:"ok"} }>
+        {/* <button onClick={exportProductsToFirestore}>Export data a FS</button>  */}
         <BrowserRouter>
           <main className="container">
             <NavBar/>

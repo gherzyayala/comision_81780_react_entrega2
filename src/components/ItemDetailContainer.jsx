@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { getProductsById } from "../data/mockAPI";
+import { getProductsById } from "../data/firestore";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import cartContext from "../context/cartContext";
